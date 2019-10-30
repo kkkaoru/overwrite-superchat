@@ -63,3 +63,6 @@ typings/
 *.zip
 
 src/icon-*.png
+
+dist/*
+!dist/.gitkeep

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cp -r src/* dist/ && envsub src/overwrite.css dist/overwrite.css",
+    "zip": "zip -r extension.zip dist",
+    "pre-deploy": "npm run build && npm run zip"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kkkaoru/overwrite-superchat/issues"
   },
-  "homepage": "https://github.com/kkkaoru/overwrite-superchat#readme"
+  "homepage": "https://github.com/kkkaoru/overwrite-superchat#readme",
+  "dependencies": {
+    "envsub": "^3.0.9"
+  }
 }

@@ -1,6 +1,6 @@
 :root {
-  --overwrite-name: "";
-  --overwrite-image: url("");
+  --overwrite-name: "${OVERWRITE_NAME}";
+  --overwrite-image: url("${OVERWRITE_IMAGE}");
 }
 #author-name.yt-live-chat-paid-message-renderer {
   visibility: hidden;
