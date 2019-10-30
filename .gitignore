@@ -61,3 +61,5 @@ typings/
 .next
 
 *.zip
+
+src/icon-*.png

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Overwrite supuerchat",
+  "description": "Superchat is very cool!",
+  "version": "1.0",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "homepage_url": "https://github.com/kkkaoru/overwrite-superchat",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "all_frames": true,
+      "css": ["overwrite.css"]
+    }
+  ]
+}

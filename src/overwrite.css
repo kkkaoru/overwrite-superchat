@@ -1,0 +1,34 @@
+:root {
+  --overwrite-name: "";
+  --overwrite-image: url("");
+}
+#author-name.yt-live-chat-paid-message-renderer {
+  visibility: hidden;
+  position: relative;
+}
+
+#author-name.yt-live-chat-paid-message-renderer::before {
+  /* Overwrite name */
+  content: var(--overwrite-name);
+  visibility: visible;
+  position: absolute;
+}
+.yt-live-chat-paid-message-renderer #img {
+  visibility: hidden;
+  position: relative;
+}
+#author-photo {
+  position: relative;
+}
+.yt-live-chat-paid-message-renderer #author-photo::before,
+.yt-live-chat-ticker-paid-message-item-renderer #author-photo::before {
+  content: "";
+  /* Overwrite image url */
+  background-image: var(--overwrite-image);
+  width: 40px;
+  height: 40px;
+  visibility: visible;
+  display: inline-block;
+  position: absolute;
+  background-size: contain;
+}
